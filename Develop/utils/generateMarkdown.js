@@ -17,4 +17,28 @@ function generateMarkdown(data) {
 `;
 }
 
+const generateContributors = contributorsArr => {
+  return `
+    <br>
+    ${contributorsArr
+    .map(({ contributorName, website}) => {
+      return `
+        ****${contributorName}:**** [Contributor's Link](${website})
+      `;
+    })
+    .join('<br>')}
+  `;
+};
+
+module.exports = finalData => {
+  const { contributors, ...data} = finalData;
+  return `
+    #${data.projectTitle}<br><br>
+    
+
+  `;
+}
+
+
+
 module.exports = generateMarkdown;
