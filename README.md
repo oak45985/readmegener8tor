@@ -5,13 +5,13 @@
 # Project Title<br><br>
 
 ## Table of Contents<br>
-### <a name="des">Description</a> <br>
+### [Description](#des)
 ### <a name="ins">Installation</a> <br>
 ### <a name="use">Usage</a> <br>
 ### <a name="con">Contributors</a> <br>
-### <a name="que">Questions/Contact</a> <br><br>
+### [Questions/Contact](#que)
 
-## [Description](#des)
+## <a name="des">Description</a> <br>
 lorem ipsum
 lorem ipsum
 lorem ipsum
@@ -67,7 +67,7 @@ lorem ipsum
 lorem ipsum
 lorem ipsum
 
-## [Questions/Contact](#que)
+## <a name="que">Questions/Contact</a> <br><br>
 lorem ipsum
 lorem ipsum
 lorem ipsum
