@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateReadMe = require('./utils/generateMarkdown')
+const generateReadMe = require('./utils/generateMarkdown');
 
 const readMeData = () => {
     return inquirer.prompt([

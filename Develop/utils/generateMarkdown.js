@@ -34,7 +34,15 @@ module.exports = finalData => {
   const { contributors, ...data} = finalData;
   return `
     #${data.projectTitle}<br><br>
-    
+
+    ##Table of Contents<br>
+    ###Description<br>
+    ###Installation<br>
+    ###Usage<br>
+    ###Contributors<br>
+    ###Questions/Contact<br><br>
+
+    ##Description
 
   `;
 }
