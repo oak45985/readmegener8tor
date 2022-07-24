@@ -6,12 +6,12 @@
 
 ## Table of Contents<br>
 ### [Description](#des)
-### <a name="ins">Installation</a> <br>
-### <a name="use">Usage</a> <br>
-### <a name="con">Contributors</a> <br>
+### [Installation](#ins)
+### [Usage](#use)
+### [Contributors](#con)
 ### [Questions/Contact](#que)
 
-## <a name="des">Description</a> <br>
+## <a name="des">Description</a>
 lorem ipsum
 lorem ipsum
 lorem ipsum
@@ -25,7 +25,7 @@ lorem ipsum
 lorem ipsum
 lorem ipsum
 
-## [Installation](#ins)
+## <a name="ins">Installation</a>
 lorem ipsum
 lorem ipsum
 lorem ipsum
@@ -39,7 +39,7 @@ lorem ipsum
 lorem ipsum
 lorem ipsum
 
-## [Usage](#use)
+## <a name="use">Usage</a>
 lorem ipsum
 lorem ipsum
 lorem ipsum
@@ -53,7 +53,7 @@ lorem ipsum
 lorem ipsum
 lorem ipsum
 
-## [Contributors](#con)
+## <a name="con">Contributors</a>
 lorem ipsum
 lorem ipsum
 lorem ipsum
@@ -67,7 +67,7 @@ lorem ipsum
 lorem ipsum
 lorem ipsum
 
-## <a name="que">Questions/Contact</a> <br><br>
+## <a name="que">Questions/Contact</a>
 lorem ipsum
 lorem ipsum
 lorem ipsum

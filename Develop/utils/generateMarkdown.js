@@ -36,11 +36,11 @@ module.exports = finalData => {
     #${data.projectTitle}<br><br>
 
     ##Table of Contents<br>
-    ###Description<br>
-    ###Installation<br>
-    ###Usage<br>
-    ###Contributors<br>
-    ###Questions/Contact<br><br>
+    ### [Description](#des)
+    ### [Installation](#ins)
+    ### [Usage](#use)
+    ### [Contributors](#con)
+    ### [Questions/Contact](#que)
 
     ##Description
 
