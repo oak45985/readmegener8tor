@@ -31,18 +31,35 @@ const generateContributors = contributorsArr => {
 };
 
 module.exports = finalData => {
-  const { contributors, ...data} = finalData;
+  const { contributors, license, ...data} = finalData;
   return `
-    #${data.projectTitle}<br><br>
+    #${data.projectTitle}
 
-    ##Table of Contents<br>
+    ##Table of Contents
     ### [Description](#des)
     ### [Installation](#ins)
     ### [Usage](#use)
     ### [Contributors](#con)
-    ### [Questions/Contact](#que)
+    ### [Questions/Contact](#que)<br><br>
 
-    ##Description
+    ## <a name="des">Description</a>
+    <p>${data.description}</p><br>
+
+
+    ## <a name="ins">Installation</a>
+    <p>${data.installation}</p><br>
+
+
+    ## <a name="use">Usage</a>
+    <p>${data.usage}</p><br>
+
+
+    ## <a name="con">Contributors</a>
+    <p>${generateContributors(contributors)}</p>
+
+
+    ## <a name="que">Questions/Contact</a>
+    <p>For further questions, needs, or policies on contributions, please visit the owner's <a href="https://github.com/${data.github}">GitHub</a> page or contact them at: ${data.email}.</p>
 
   `;
 }
