@@ -11,19 +11,17 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+// function generateMarkdown(data) {
+//   return `# ${data.title}
 
-`;
-}
+// `;
+// }
 
 const generateContributors = contributorsArr => {
   return `
-    <br>
     ${contributorsArr
     .map(({ contributorName, website}) => {
-      return `
-        ****${contributorName}:**** [Contributor's Link](${website})
+      return `${contributorName}: <a href="${website}">${contributorName}</a>
       `;
     })
     .join('<br>')}
@@ -33,37 +31,38 @@ const generateContributors = contributorsArr => {
 module.exports = finalData => {
   const { contributors, license, ...data} = finalData;
   return `
-    #${data.projectTitle}
+# ${data.projectTitle}
 
-    ##Table of Contents
-    ### [Description](#des)
-    ### [Installation](#ins)
-    ### [Usage](#use)
-    ### [Contributors](#con)
-    ### [Questions/Contact](#que)<br><br>
+LICENSE DATA
 
-    ## <a name="des">Description</a>
-    <p>${data.description}</p><br>
+## Table of Contents
+### [Description](#des)
+### [Installation](#ins)
+### [Usage](#use)
+### [Contributors](#con)
+### [Questions/Contact](#que)<br><br>
 
-
-    ## <a name="ins">Installation</a>
-    <p>${data.installation}</p><br>
+## <a name="des">Description</a>
+<p> ${data.description} </p><br>
 
 
-    ## <a name="use">Usage</a>
-    <p>${data.usage}</p><br>
+## <a name="ins">Installation</a>
+<p> ${data.installation} </p><br>
 
 
-    ## <a name="con">Contributors</a>
-    <p>${generateContributors(contributors)}</p>
+## <a name="use">Usage</a>
+<p> ${data.usage} </p><br>
 
 
-    ## <a name="que">Questions/Contact</a>
-    <p>For further questions, needs, or policies on contributions, please visit the owner's <a href="https://github.com/${data.github}">GitHub</a> page or contact them at: ${data.email}.</p>
+## <a name="con">Contributors</a>
+<p> ${generateContributors(contributors)} </p>
 
-  `;
+
+## <a name="que">Questions/Contact</a>
+<p> For further questions, needs, or policies on contributions, please visit the owner's <a href="https://github.com/${data.github}">GitHub</a> page or contact them at: <a href="mailto:${data.email}">${data.email}</a>.</p>
+`;
 }
 
 
 
-module.exports = generateMarkdown;
+// module.exports = generateMarkdown;

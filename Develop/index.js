@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateReadMe = require('./utils/generateMarkdown');
+const { writeFile } = require('./src/writeMarkdown');
 
 const readMeData = () => {
     return inquirer.prompt([
@@ -61,7 +62,7 @@ const readMeData = () => {
             type: "list",
             name: "license",
             message: "Please choose the license for this project.",
-            choices: ["Apache License 2.0", "GNU GPLv3", "MIT", "ISC License"]
+            choices: ["Apache", "GNUGPLv3", "MIT", "ISC License"]
          },
         {
             type: "input",
@@ -89,15 +90,15 @@ const readMeData = () => {
                 }
             }
         }
-    ])
+    ]);
 
-}
+};
 
-const promptContributor = projectData => {
+const promptContributor = finalData => {
     console.log(`Enter Contributors`);
 
-    if (!projectData.contributors) {
-        projectData.contributors = [];
+    if (!finalData.contributors) {
+        finalData.contributors = [];
     }
         return inquirer
         .prompt([
@@ -134,10 +135,10 @@ const promptContributor = projectData => {
                 default: false
             }
         ])
-        .then(itemData => {
-            projectData.contributors.push(itemData);
-        if (itemData.confirmAddContributor) {
-            return promptContributor(projectData);
+        .then(contributorData => {
+            finalData.contributors.push(contributorData);
+        if (contributorData.confirmAddContributor) {
+            return promptContributor(finalData);
         } else {
             return finalData;
         }
@@ -148,6 +149,12 @@ readMeData()
     .then(promptContributor)
     .then(finalData => {
         return generateReadMe(finalData);
+    })
+    .then(writeMarkDown => {
+        return writeFile(writeMarkDown);
+    })
+    .catch(err => {
+        console.log(err);
     })
 // TODO: Create an array of questions for user input
 // const questions = [];
