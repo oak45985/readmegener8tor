@@ -62,7 +62,7 @@ const readMeData = () => {
             type: "list",
             name: "license",
             message: "Please choose the license for this project.",
-            choices: ["Apache", "GNUGPLv3", "MIT", "ISC License"]
+            choices: ["Apache", "GNUGPLv3", "MIT", "ISC", "No License"]
          },
         {
             type: "input",

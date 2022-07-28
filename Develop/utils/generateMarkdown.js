@@ -5,8 +5,29 @@ function renderLicenseBadge(license) {
   const choices = [
     {
       name: "Apache", 
-      site: "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-    }, 
+      badge: "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+      site: "https://opensource.org/licenses/Apache-2.0"
+    },
+    {
+      name: "GNUGPLv3",
+      badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+      site: "https://www.gnu.org/licenses/gpl-3.0"
+    },
+    {
+      name: "MIT",
+      badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+      site: "https://opensource.org/licenses/MIT"
+    },
+    {
+      name: "ISC",
+      badge: "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)",
+      site: "https://opensource.org/licenses/ISC"
+    },
+    {
+      name: "No License",
+      badge: "",
+      site: "",
+    }
 
   ];
 
