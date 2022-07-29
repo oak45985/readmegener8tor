@@ -1,4 +1,4 @@
-# Professional README Generator Starter Code
+# README Generator
 
 ## Acceptance Criteria
 
