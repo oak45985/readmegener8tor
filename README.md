@@ -20,7 +20,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Image of final README.md
 
-[! Generated Readme](./images/Screen%20Shot%202022-07-28%20at%2011.10.28%20PM.png)
+![Generated Readme](./images/Screen%20Shot%202022-07-28%20at%2011.10.28%20PM.png)
 
 This item can be found in the "Develop" folder of this project.
 
